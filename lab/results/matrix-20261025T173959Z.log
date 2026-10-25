@@ -1,0 +1,18 @@
+== corpus generation inside node:24.22.1 ==
+corpus: control.br, hang13.br
+== node:24.22.0 :: control.br ==
+{"mode":"sync","kind":"ok","node":"v24.22.0","inBytes":48,"outBytes":53,"sha256":"a3c189ef3ef906b0587973e88cff4973792388bd0e9329f30d4839f60a8d7028"}
+{"mode":"stream","kind":"ok","node":"v24.22.0","inBytes":48,"outBytes":53,"sha256":"a3c189ef3ef906b0587973e88cff4973792388bd0e9329f30d4839f60a8d7028"}
+exit=0
+== node:24.22.0 :: hang13.br ==
+{"mode":"sync","kind":"error","node":"v24.22.0","inBytes":13,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"mode":"stream","kind":"error","node":"v24.22.0","inBytes":13,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+exit=0
+== node:24.22.1 :: control.br ==
+{"mode":"sync","kind":"ok","node":"v24.22.1","inBytes":48,"outBytes":53,"sha256":"a3c189ef3ef906b0587973e88cff4973792388bd0e9329f30d4839f60a8d7028"}
+{"mode":"stream","kind":"ok","node":"v24.22.1","inBytes":48,"outBytes":53,"sha256":"a3c189ef3ef906b0587973e88cff4973792388bd0e9329f30d4839f60a8d7028"}
+exit=0
+== node:24.22.1 :: hang13.br ==
+{"mode":"sync","kind":"error","node":"v24.22.1","inBytes":13,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"mode":"stream","kind":"error","node":"v24.22.1","inBytes":13,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+exit=0
