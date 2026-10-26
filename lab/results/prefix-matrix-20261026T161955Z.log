@@ -1,0 +1,60 @@
+== node:24.22.0 :: hang13.br (prefix sweep k=1..13, wait 800ms, no end()) ==
+{"prefixBytes":1,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":2,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":3,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":4,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":5,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":6,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":7,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":8,"kind":"parked","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":9,"kind":"error","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":10,"kind":"error","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":11,"kind":"error","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":12,"kind":"error","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":13,"kind":"error","node":"v24.22.0","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+exit=0
+== node:24.22.0 :: control.br (prefix sweep k=1..13, wait 800ms, no end()) ==
+{"prefixBytes":1,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":2,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":3,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":4,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":5,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":6,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":7,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":8,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":9,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":10,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":11,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":12,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":13,"kind":"parked","node":"v24.22.0","inBytes":48,"waitMs":800,"outBytes":0}
+exit=0
+== node:24.22.1 :: hang13.br (prefix sweep k=1..13, wait 800ms, no end()) ==
+{"prefixBytes":1,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":2,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":3,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":4,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":5,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":6,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":7,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":8,"kind":"parked","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0}
+{"prefixBytes":9,"kind":"error","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":10,"kind":"error","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":11,"kind":"error","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":12,"kind":"error","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+{"prefixBytes":13,"kind":"error","node":"v24.22.1","inBytes":13,"waitMs":800,"outBytes":0,"name":"Error","code":"ERR__ERROR_FORMAT_CL_SPACE","errno":-6,"message":"Decompression failed"}
+exit=0
+== node:24.22.1 :: control.br (prefix sweep k=1..13, wait 800ms, no end()) ==
+{"prefixBytes":1,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":2,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":3,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":4,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":5,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":6,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":7,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":8,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":9,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":10,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":11,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":12,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+{"prefixBytes":13,"kind":"parked","node":"v24.22.1","inBytes":48,"waitMs":800,"outBytes":0}
+exit=0
