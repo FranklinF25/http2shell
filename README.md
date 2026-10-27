@@ -43,11 +43,15 @@ matrix log under `lab/results/`.
 
 ## Research lines
 
-- **Prefix-feed oracle** (next): feed `k` of the 13 trigger bytes without
-  ending the writable side. If the vulnerable build parks in
-  `NEEDS_MORE_INPUT` while the fixed build errors cleanly at the same `k`,
-  that is a bounded-cost, safe differential signal — the piece the current
-  scanner ecosystem (full 23 MB trigger probes) does not have.
+- **Prefix-feed oracle** — tested and NEGATIVE on the Node pair (2026-10-26):
+  feeding k-byte prefixes of the 13-byte trigger without ending the stream
+  parks identically (k ≤ 8) and errors identically at CL_SPACE (k ≥ 9) on
+  both builds — header-invalid small probes can never reach the vulnerable
+  branch. Bounded-cost behavioral detection on Node zlib via small probes is
+  closed; remaining candidates are other decoder consumers (brotli CLI
+  1.2.0/1.2.1, PyPI Brotli 1.2.0/1.2.1, Bun 1.4.3/1.4.4) and larger
+  header-valid constructs. Evidence:
+  [`lab/results/2026-10-26-prefix-analysis.md`](lab/results/2026-10-26-prefix-analysis.md).
 - Safe differential detection of patched vs unpatched Brotli consumers.
 - Deterministic single-shot remote exploitation (heap-side stabilization of
   the OOB write).
