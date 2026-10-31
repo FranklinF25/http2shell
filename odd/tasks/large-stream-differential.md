@@ -33,10 +33,14 @@ README research-line updates with the new public references.
   both images (lab/http/), plus an original scanner client (lab/http/scan.js)
   replicating the one-byte-controls + full-probe response-class methodology. Route:
   inline (depends on T2 generator). Risk: none (loopback-only servers).
+  Commit: 00589d0. RESULT: public class logic says not-distinguishable (non-crashing
+  probe never reaches the valid class), but message-level black-box oracle confirmed:
+  vuln 400 'unexpected end of file' vs fixed 400 'Decompression failed', through
+  Express 5.3.0 + body-parser 2.3.0. Controls identical; both stable after probe.
 - T4 (S2, S3): Analysis write-up in lab/results + close feature. Route: inline.
 
-Slice boundary: T1+T2 = 538 authored lines (2 commits). T3 (HTTP harness) and
-T4 (analysis) form the next slices; each behavior lands with its own commit.
+Slice boundary: T1+T2 = 538 lines (commits 5c6572b, a930e0c). T3 = 306 lines
+(commit 00589d0). T4 = docs-only closing slice.
 
 ## Log
 
@@ -48,3 +52,16 @@ T4 (analysis) form the next slices; each behavior lands with its own commit.
   exploitation warning Oct 28; ELLIO ITW sample 23,069,983 bytes; public scanner
   methodology = one-byte controls + ~23 MB probe with Expect: 100-continue + response
   classes. PoC repo license is all-rights-reserved: technique only, no code copying.
+- L3 (evidence 2026-10-31, T2): first real pair differential — vuln `Z_BUF_ERROR
+  -5 'unexpected end of file'` vs fixed `ERR__ERROR_FORMAT_BLOCK_SWITCH -17`, all
+  three feed modes, deterministic across two full runs (trigger sha256 b7a6508e…).
+  Negative control: all-zeros flood rejected CL_SPACE identically on both —
+  differential is payload-shaped, not size-shaped.
+- L4 (evidence 2026-10-31, T3): HTTP path (Express 5.3.0 + body-parser 2.3.0) —
+  both images answer 400 to the full probe and stay healthy; public class logic
+  says not-distinguishable, but the zlib message differs in the response body
+  ('unexpected end of file' vs 'Decompression failed'): message-level black-box
+  oracle, conditional on the app's error handler surfacing err.message.
+- L5 (close 2026-10-31): all tasks T1–T4 done on branch feat/large-stream-differential;
+  commits 5c6572b (docs), a930e0c (trigger + decoder matrix), 00589d0 (HTTP harness),
+  plus this analysis slice. Merge/push left to the user.

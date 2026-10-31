@@ -70,7 +70,9 @@ Requires Docker. Everything runs inside pinned official images; nothing
 security-relevant executes on the host.
 
 ```bash
-bash lab/run.sh        # or: make lab
+bash lab/run.sh        # small-probe matrix
+bash lab/run-large.sh  # ~23 MB block-switch-exhaustion differential
+bash lab/run-http.sh   # HTTP-path response-class/message oracle
 ```
 
 Each run regenerates the corpus inside a container and writes a timestamped
@@ -78,12 +80,15 @@ matrix log under `lab/results/`.
 
 ## Research lines
 
-- **Large-stream differential** — ACTIVE (2026-10-31): original generator for a
-  ~23 MB header-valid block-switch-exhaustion stream (public technique, no
-  copied code — the reference PoC repo is all-rights-reserved), fed one-shot
-  and chunked to both images; plus an HTTP response-class harness replicating
-  the public scanner methodology against the Docker pair. Goal: first real
-  differential signal of this lab.
+- **Large-stream differential** — POSITIVE (2026-10-31): an original ~23 MB
+  block-switch-exhaustion trigger (public technique, no copied code — the
+  reference PoC repo is all-rights-reserved) yields the lab's first real
+  differential, deterministic in all feed modes: vuln `Z_BUF_ERROR -5
+  'unexpected end of file'` vs fixed `ERR__ERROR_FORMAT_BLOCK_SWITCH -17`.
+  Through the full HTTP path (Express 5.3.0 + body-parser 2.3.0) both answer
+  400 but the zlib message leaks into the response — a message-level
+  black-box oracle, conditional on the app surfacing error details. Evidence:
+  [`lab/results/2026-10-31-large-stream-analysis.md`](lab/results/2026-10-31-large-stream-analysis.md).
 - **Prefix-feed oracle** — tested and NEGATIVE on the Node pair (2026-10-26),
   and now causally explained by the public root cause (see above): small
   header-invalid probes can never reach the vulnerable branch. Bounded-cost
