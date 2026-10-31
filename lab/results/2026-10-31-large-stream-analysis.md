@@ -89,7 +89,9 @@ Caveats (honest limits):
 3. Timing (996 ms vs 1038 ms server-side) is noise-level and was not
    treated as a signal.
 
-Evidence: `lab/results/http-scan-20261031T194429Z.log`.
+Evidence: `lab/results/http-scan-20261031T194429Z.log` (deterministic on a
+second independent run: identical bodies and sha256s,
+`lab/results/http-scan-20261031T194742Z.log`).
 
 ## Conclusions
 
