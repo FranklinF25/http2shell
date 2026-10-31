@@ -1,5 +1,2 @@
-node_modules/
-*.log
-.env
-.atl/
-!lab/results/*.log
+lab/triggers/blockswitch-flood.br
+lab/triggers/bs-*.br
