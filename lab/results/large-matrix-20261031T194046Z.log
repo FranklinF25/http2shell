@@ -1,0 +1,21 @@
+== generating trigger (commands=16777216) inside node:24.22.1 ==
+{"file":"/lab/triggers/blockswitch-flood.br","bytes":23068690,"headerBits":143,"commands":16777216,"blenExtra":16777215}
+== node:24.22.0 :: sync ==
+{"kind":"error","mode":"sync","node":"v24.22.0","inBytes":23068690,"sha256":"b7a6508eb39ef57ae5e3fdf9aa85540071a06eff5d5b5a2d359fc8e1768e4df4","name":"Error","code":"Z_BUF_ERROR","errno":-5,"message":"unexpected end of file"}
+exit=0
+== node:24.22.0 :: stream-whole ==
+{"kind":"error","mode":"stream-whole","node":"v24.22.0","inBytes":23068690,"sha256":"b7a6508eb39ef57ae5e3fdf9aa85540071a06eff5d5b5a2d359fc8e1768e4df4","name":"Error","code":"Z_BUF_ERROR","errno":-5,"message":"unexpected end of file"}
+exit=0
+== node:24.22.0 :: stream-chunked ==
+{"kind":"error","mode":"stream-chunked","node":"v24.22.0","inBytes":23068690,"sha256":"b7a6508eb39ef57ae5e3fdf9aa85540071a06eff5d5b5a2d359fc8e1768e4df4","name":"Error","code":"Z_BUF_ERROR","errno":-5,"message":"unexpected end of file"}
+exit=0
+== node:24.22.1 :: sync ==
+{"kind":"error","mode":"sync","node":"v24.22.1","inBytes":23068690,"sha256":"b7a6508eb39ef57ae5e3fdf9aa85540071a06eff5d5b5a2d359fc8e1768e4df4","name":"Error","code":"ERR__ERROR_FORMAT_BLOCK_SWITCH","errno":-17,"message":"Decompression failed"}
+exit=0
+== node:24.22.1 :: stream-whole ==
+{"kind":"error","mode":"stream-whole","node":"v24.22.1","inBytes":23068690,"sha256":"b7a6508eb39ef57ae5e3fdf9aa85540071a06eff5d5b5a2d359fc8e1768e4df4","name":"Error","code":"ERR__ERROR_FORMAT_BLOCK_SWITCH","errno":-17,"message":"Decompression failed"}
+exit=0
+== node:24.22.1 :: stream-chunked ==
+{"kind":"error","mode":"stream-chunked","node":"v24.22.1","inBytes":23068690,"sha256":"b7a6508eb39ef57ae5e3fdf9aa85540071a06eff5d5b5a2d359fc8e1768e4df4","name":"Error","code":"ERR__ERROR_FORMAT_BLOCK_SWITCH","errno":-17,"message":"Decompression failed"}
+exit=0
+== matrix written to lab/results/large-matrix-20261031T194046Z.log ==
