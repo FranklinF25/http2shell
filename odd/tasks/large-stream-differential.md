@@ -19,17 +19,24 @@ README research-line updates with the new public references.
 
 ## Tasks
 
-- T1 (S1): Update README research lines with Oct 22–28 public references. Route: inline.
+- T1 (S1): Update README research lines with Oct 22–28 public references. Route: inline. Commit: 5c6572b.
 - T2 (S2): Original large-stream generator (lab/gen-trigger.js) validated stage by
   stage against the fixed decoder's error codes; run one-shot + chunked matrix on the
   pair (lab/run-large.sh); record first differential if any. Route: inline (iterative
   binary crafting needs parent context). Risk: none (Docker-contained probing of our
-  own pinned images; no host execution of trigger bytes).
+  own pinned images; no host execution of trigger bytes). Commit: a930e0c.
+  RESULT: first real differential — vuln Z_BUF_ERROR -5 'unexpected end of file' vs
+  fixed ERR__ERROR_FORMAT_BLOCK_SWITCH -17, all three feed modes, deterministic
+  (two full runs, same sha256). Negative control: all-zeros flood payload rejected
+  CL_SPACE on both -> differential is payload-shaped, not size-shaped.
 - T3 (S3): HTTP response-class harness: Express 5 + body-parser endpoint pinned in
   both images (lab/http/), plus an original scanner client (lab/http/scan.js)
   replicating the one-byte-controls + full-probe response-class methodology. Route:
   inline (depends on T2 generator). Risk: none (loopback-only servers).
 - T4 (S2, S3): Analysis write-up in lab/results + close feature. Route: inline.
+
+Slice boundary: T1+T2 = 538 authored lines (2 commits). T3 (HTTP harness) and
+T4 (analysis) form the next slices; each behavior lands with its own commit.
 
 ## Log
 
